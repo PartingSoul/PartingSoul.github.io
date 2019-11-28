@@ -1,7 +1,7 @@
 # Site settings
 title: PartingSoul的专栏
 SEOTitle: parting_soul的专栏
-header-img: img/post_home.jpg
+header-img: img/post_home_top.jpg
 email: 982068238@qq.com
 description: "Every failure is leading towards success."
 keyword: "描述"
@@ -99,11 +99,11 @@ service-worker: true
 
 # Friends
 friends: [
-    {
-        title: "掘金",
-        href: "https://juejin.im/user/5c78c61e6fb9a049f362cc79/posts"
-    },{
-        title: "Android Developer",
-        href: "https://developer.android.google.cn/"
-    }
+#    {
+#        title: "掘金",
+#        href: "https://juejin.im/user/5c78c61e6fb9a049f362cc79/posts"
+#    },{
+#        title: "Android Developer",
+#        href: "https://developer.android.google.cn/"
+#    }
 ]
