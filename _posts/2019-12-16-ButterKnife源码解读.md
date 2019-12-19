@@ -769,22 +769,22 @@ parseBindView方法主要是用于解析BindView注解，得到被注解修饰�
    注解修饰的属性类型合法性：被BindView修饰的元素需要是View的子类或者接口
 
    ```java
-   // 得到类元素的全名
-   Name qualifiedName = enclosingElement.getQualifiedName();
-// 得到属性的名字
-   Name simpleName = element.getSimpleName();
-if (!isSubtypeOfType(elementType, VIEW_TYPE) && !isInterface(elementType)) {
-     // 若当前类不是View类的子类并且类型元素不是接口
-     if (elementType.getKind() == TypeKind.ERROR) {
-       note(element, "@%s field with unresolved type (%s) "
-            + "must elsewhere be generated as a View or interface. (%s.%s)",
-            BindView.class.getSimpleName(), elementType, qualifiedName, simpleName);
-     } else {
-       error(element, "@%s fields must extend from View or be an interface. (%s.%s)",
-             BindView.class.getSimpleName(), qualifiedName, simpleName);
-       hasError = true;
-     }
-   }
+       // 得到类元素的全名
+       Name qualifiedName = enclosingElement.getQualifiedName();
+    // 得到属性的名字
+       Name simpleName = element.getSimpleName();
+    if (!isSubtypeOfType(elementType, VIEW_TYPE) && !isInterface(elementType)) {
+         // 若当前类不是View类的子类并且类型元素不是接口
+         if (elementType.getKind() == TypeKind.ERROR) {
+           note(element, "@%s field with unresolved type (%s) "
+                + "must elsewhere be generated as a View or interface. (%s.%s)",
+                BindView.class.getSimpleName(), elementType, qualifiedName, simpleName);
+         } else {
+           error(element, "@%s fields must extend from View or be an interface. (%s.%s)",
+                 BindView.class.getSimpleName(), qualifiedName, simpleName);
+           hasError = true;
+         }
+       }
    ```
 
 2. 将被注解的属性信息保存
