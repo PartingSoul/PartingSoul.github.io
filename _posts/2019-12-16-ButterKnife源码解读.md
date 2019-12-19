@@ -12,8 +12,6 @@ tags:
     - 源码分析
 ---
 
-[TOC]
-
 # 一. 概述
 
 [ButterKnife](https://github.com/JakeWharton/butterknife) 是一个依赖注入框架，主要用于绑定View、一些View的事件等等，可以大大减少findViewById以及设置View事件监听器的代码，并且框架的性能相比于传统写法也没有什么太大的损耗。
