@@ -75,10 +75,8 @@ public class MessengerActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (isBound) {
-            unbindService(mServiceConnection);
-            isBound = false;
-        }
+        unbindService(mServiceConnection);
+        isBound = false;
     }
 
     public void onClick(View view) {
