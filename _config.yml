@@ -107,3 +107,4 @@ friends: [
 #        href: "https://developer.android.google.cn/"
 #    }
 ]
+plugins: [jekyll-paginate]

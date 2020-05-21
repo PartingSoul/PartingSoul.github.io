@@ -1,0 +1,81 @@
+I"c<h3 id="1-安装androidstudio">1. 安装AndroidStudio</h3>
+
+<p>在<a href="https://developer.android.google.cn/studio">官网</a>下载最新版的AndroidStudio，双击安装。安装完成后通过AVD Manger安装Android 模拟器。</p>
+
+<p><img src="http://qagey3wv5.bkt.clouddn.com//image-20200517173626743.png" alt="image-20200517173626743" /></p>
+
+<h3 id="2-安装xcode">2. 安装Xcode</h3>
+
+<p>在App Store 中安装Xcode，使用如下的命令行可以启动一个iOS的模拟器</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> open <span class="nt">-a</span> Simulator
+</code></pre></div></div>
+
+<h3 id="3-安装flutter">3. 安装Flutter</h3>
+
+<h4 id="31-配置镜像站点">3.1 配置镜像站点</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PUB_HOSTED_URL</span><span class="o">=</span>https://pub.flutter-io.cn  
+<span class="nb">export </span><span class="nv">FLUTTER_STORAGE_BASE_URL</span><span class="o">=</span>https://storage.flutter-io.cn
+</code></pre></div></div>
+
+<h4 id="32-下载flutter与环境变量配置">3.2 下载Flutter与环境变量配置</h4>
+
+<p><a href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos">Flutter官网</a>下载最新版本，并在环境变量中配置Flutter SDK的目录</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.bash_profile
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Users/parting_soul/Library/flutter/bin
+<span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<p>注意上述命令在Shell为Bash才会生效，若Shell使用的是zsh，则执行source ~/.bash_profile不会生效，需要将上述环境变量加入到zsh中去。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.zshrc
+<span class="nb">source</span> ~/.bash_profile
+<span class="nb">source</span> ~/.zshrc
+</code></pre></div></div>
+
+<p>若之前已经安装过旧版的Flutter，只需要通过命令更新Flutter SDK的版本即可</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter upgrade
+</code></pre></div></div>
+
+<h3 id="4-运行flutter项目">4. 运行Flutter项目</h3>
+
+<p>在安装完Flutter SDK和开发工具后，为了检查是否缺少了Flutter项目运行的一些必要工具或者环境，可以使用下方的命令对环境进行检测。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter doctor
+</code></pre></div></div>
+
+<p>若缺少必要的插件或者环境，运行该命令后会有提示，左侧打钩的表示这个IDE配置正常；叹号的表示缺少一些插件，需要安装。</p>
+
+<p><img src="http://qagey3wv5.bkt.clouddn.com//image-20200517175611762.png" alt="image-20200517175611762" /></p>
+
+<p>所有准备工作完成后，启动一个运行flutter项目的模拟器</p>
+
+<p>以下命令可以查看所有可用的模拟器</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter emulators 
+</code></pre></div></div>
+
+<p>启动模拟器</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter emulators <span class="nt">--launch</span> &lt;emulator <span class="nb">id</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>例如启动一个iOS模拟器</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter emulators  <span class="nt">--launch</span> apple_ios_simulator
+</code></pre></div></div>
+
+<p>进入Flutter sdk的目录，目录中有一个flutter示例的文件夹，找到hellw_world这个项目，输入以下命令在模拟器上运行该项目</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter run
+</code></pre></div></div>
+
+<p>若存在多个模拟器，可加上-d 参数指定某一个模拟器运行</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter <span class="nt">-d</span> <span class="o">[</span>deviceId] run
+</code></pre></div></div>
+
+:ET

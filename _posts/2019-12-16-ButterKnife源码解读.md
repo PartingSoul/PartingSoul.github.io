@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
 上述代码使用了ButterKnife注解，在编译时就会被系统扫描到，然后在同级的包名目录下会生成一个[类名]_ViewBinding的一个类。
 
-![image-20191216103225889](https://i.postimg.cc/Njs0zt7B/image.png)
+![image](http://qagey3wv5.bkt.clouddn.com//image.png)
 
 现在我们来看生成的MainActivity_ViewBinding类，这个类代码十分简单。
 
@@ -580,7 +580,7 @@ public boolean process(Set<? extends TypeElement> elements, RoundEnvironment env
 
 在分析细节前，首先看一下ButterKnife注解编译器的项目结构
 
-![ButterKnife注解编译器项目结构](https://i.postimg.cc/x1M9vTBg/butterknife-compiler.png)
+![butterknife-compiler](http://qagey3wv5.bkt.clouddn.com//butterknife-compiler.png)
 
 每个类或接口的作用：
 
