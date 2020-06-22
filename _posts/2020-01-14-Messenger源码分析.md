@@ -130,7 +130,7 @@ public void send(Message message) throws RemoteException {
 
 #### 2.3 小结
 
-![Messenger](http://qagey3wv5.bkt.clouddn.com/Messenger.png)
+![Messenger](http://img.partingsoul.cn/Messenger.png)
 
 - Messenger内部实现还是通过AIDL，只是Messenger封装了AIDL
 - Messenger的AIDL方法中定义了一个用于客户端向服务端发送消息的send方法
