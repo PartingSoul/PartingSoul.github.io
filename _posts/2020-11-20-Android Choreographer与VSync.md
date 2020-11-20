@@ -27,7 +27,7 @@ tags:
 
 ###  二. 执行流程
 
-一个View内容或者宽高发生变化，会调用View的 **invalid() **  或者 **requestLayout()** 方法，例如TextView，通过**setText()** 方法设置文本内容，内部最终调用了 **requestLayout()**以及 **invalid() ** 方法
+一个View内容或者宽高发生变化，会调用View的 **invalid()** 或者 **requestLayout()** 方法，例如TextView，通过**setText()** 方法设置文本内容，内部最终调用了 **requestLayout()**以及 **invalid()** 方法
 
 TextView.java
 
